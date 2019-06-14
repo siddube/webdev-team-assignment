@@ -1,0 +1,173 @@
+/* for the actual slider itself  */
+.container {
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 40%;
+  background: #4c4c4c;
+}
+.img_slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.img_slider img {
+  width: 100%;
+  height: 100%;
+}
+#i1,
+#12,
+#i3 {
+  display: none;
+}
+
+.navdots {
+  display: none;
+}
+
+/* arrows at side*/
+.pre,
+.nxt {
+  width: 12%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(88, 88, 88, 0.4);
+  z-index: 99;
+  cursor: pointer;
+}
+/* side arrows*/
+.pre {
+  left: 0;
+}
+.nxt {
+  right: 0;
+}
+/* bottom dots*/
+.navdots {
+  width: 100%;
+  height: 11px;
+  bottom: 12%;
+  position: absolute;
+  text-align: center;
+  z-index: 99;
+}
+.dots {
+  top: -5px;
+  width: 100%;
+  height: 18px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 50%;
+  display: inline-block;
+  background: rgb(0, 0, 0, 0.4);
+}
+/* the z-index makes the slider work. When the radio button with id 'i1' is checked than z-index of slide one is 9, and if unchecked by default the z-index is -1;. We can check and uncheck the radio button navigation button and hence change the z-index of the images */
+.img_slider {
+  z-index: -1;
+}
+#i1:checked ~ #slide1,
+#i2:checked ~ #slide2,
+#i3:checked ~ #slide3 {
+  z-index: 9;
+}
+/* now we link the slide changes to dots */
+#i1:checked ~ .navdots #dot1,
+#i2:checked ~ .navdots #dot2,
+#i3:checked ~ .navdots #dot3 {
+  background: #fff;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.logo {
+  max-height: 100px;
+  max-width: 100px;
+  float: left;
+}
+
+/* Clear floats after the columns */
+.logo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  display: inline;
+}
+
+/* for 2 coloumn layout that is responsive
+*/
+
+.column {
+  width: 50%;
+  float: left;
+}
+
+#welcomemessage {
+  float: left;
+}
+#operatinghours {
+  float: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Clear floats before the footer */
+.footer::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
