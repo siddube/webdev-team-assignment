@@ -1,0 +1,100 @@
+/*Define Accordion box*/
+.accordion { 
+     width:830px;
+     overflow:hidden; 
+     margin:10px auto; 
+     color:#474747; 
+     background:#0000; 
+     padding:10px; 
+}
+/*Create header text for each of the sections*/
+.accordion section{ 
+      float: none;
+      overflow:hidden; 
+      color:#333; 
+      cursor:pointer; 
+      background: #4caf50; 
+      margin:3px; 
+}
+.accordion section:hover {
+      background:#4444;
+}
+/*hide all text until target is clicked*/
+.accordion section p { 
+      display:none; 
+}
+/*hide all text until target is clicked*/
+.accordion section ol { 
+      display:none; 
+}
+.accordion section:after{
+      position:relative;
+      font-size:24px;
+      color:#000;
+      font-weight:bold;
+}
+.accordion section:nth-child(1):after{ content:'1'; }
+.accordion section:nth-child(2):after{ content:'2'; }
+.accordion section:nth-child(3):after{ content:'3'; }
+.accordion section:nth-child(4):after{ content:'4'; }
+.accordion section:nth-child(5):after{ content:'5'; }
+
+.accordion section:target { 
+      background:000; 
+      padding:10px;
+}
+.accordion section:target:hover { 
+      background:#FFF; 
+}
+.accordion section:target h2 {
+      width:100%;
+}
+.accordion section:target h2 a{ 
+      color:#000; 
+      padding:0;
+}
+
+/* when target is clicked, the text will display again*/
+.accordion section:target p {
+      display:block;
+}
+.accordion section:target ol {
+      display:block;
+}
+.accordion section h2 a{
+      padding:8px 10px;
+      display:block; 
+      font-size:16px; 
+      font-weight:normal;
+      color:#eee; 
+      text-decoration:none; 
+}
+
+vertical section{ 
+     width:100%; 
+     height:40px; 
+     -webkit-transition:height 0.2s ease-out;
+     -moz-transition:height 0.2s ease-out;
+     -o-transition:height 0.2s ease-out;
+     transition:height 0.2s ease-out;
+}
+ 
+/*Set height of the slide*/
+.vertical :target{ 
+     height:250px; 
+     width:97%;
+}
+/*When target is clicked will chcange the height to display the slide*/
+.vertical section h2 { 
+     position:relative; 
+     left:0; 
+     top:-1px; 
+}
+/*Set position of the number on the slide*/
+.vertical section:after{ 
+      top:-60px;
+      left:810px;
+}
+.vertical section:target:after{ 
+      left:-9999px;
+}
