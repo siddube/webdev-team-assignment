@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="This is a website for the 
-  theme park called Space Park.">
-  <meta name="author" content="w25team">
-  <meta name="viewport" content="width=device-width, 
-  initial-scale=1.0">
-  <meta name="refresh" content="600">
-  <meta name="keywords" content="Space Park Theme Amusement Rides">
-  <title>Space Park - Rides</title>
-  <link rel="stylesheet" href="assets/styles/styles.css">
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script>
-    $(document).ready(function() {
-      $('#thriller-btn').click(function() {
-        $(this).css('text-decoration', 'underline');
-        $('#kids-btn').css('text-decoration', 'none');
-        $('#water-btn').css('text-decoration', 'none');
-        $('#rides-thriller').show();
-        $('#rides-kids').hide();
-        $('#rides-water').hide();
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="This is a website for the 
+  theme park called Space Park."
+    />
+    <meta name="author" content="w25team" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+  initial-scale=1.0"
+    />
+    <meta name="refresh" content="600" />
+    <meta name="keywords" content="Space Park Theme Amusement Rides" />
+    <title>Space Park - Rides</title>
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <script
+      src="jquery.js"
+    ></script>
+    <script>
+      $(document).ready(function() {
+        $("#thriller-btn").click(function() {
+          $(this).css("text-decoration", "underline");
+          $("#kids-btn").css("text-decoration", "none");
+          $("#water-btn").css("text-decoration", "none");
+          $("#rides-thriller").show();
+          $("#rides-kids").hide();
+          $("#rides-water").hide();
+        });
+        $("#kids-btn").click(function() {
+          $(this).css("text-decoration", "underline");
+          $("#thriller-btn").css("text-decoration", "none");
+          $("#water-btn").css("text-decoration", "none");
+          $("#rides-kids").show();
+          $("#rides-thriller").hide();
+          $("#rides-water").hide();
+        });
+        $("#water-btn").click(function() {
+          $(this).css("text-decoration", "underline");
+          $("#thriller-btn").css("text-decoration", "none");
+          $("#kids-btn").css("text-decoration", "none");
+          $("#rides-water").show();
+          $("#rides-thriller").hide();
+          $("#rides-kids").hide();
+        });
       });
-      $('#kids-btn').click(function() {
-        $(this).css('text-decoration', 'underline');
-        $('#thriller-btn').css('text-decoration', 'none');
-        $('#water-btn').css('text-decoration', 'none');
-        $('#rides-kids').show();
-        $('#rides-thriller').hide();
-        $('#rides-water').hide();
-      });
-      $('#water-btn').click(function() {
-        $(this).css('text-decoration', 'underline');
-        $('#thriller-btn').css('text-decoration', 'none');
-        $('#kids-btn').css('text-decoration', 'none');
-        $('#rides-water').show();
-        $('#rides-thriller').hide();
-        $('#rides-kids').hide();
-      });
-    });
-  </script>
-</head>
+    </script>
+  </head>
 
 <body>
   <header>
@@ -58,19 +65,19 @@
   </header>
   <main id="rides-main-content">
     <h2>Our Rides</h2>
-    <div id="rides-tab">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="#" id="thriller-btn">Thriller</a>
-        </li>
-        <li class=" nav-item">
-          <a class="nav-link" href="#" id="kids-btn">Kids</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="water-btn">Water</a>
-        </li>
-      </ul>
-    </div>
+     <div id="rides-tab">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#" id="thriller-btn">Thriller</a>
+          </li>
+          <li class=" nav-item">
+            <a class="nav-link" href="#" id="kids-btn">Kids</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="water-btn">Water</a>
+          </li>
+        </ul>
+      </div>
     <div id="rides-detail-container">
       <div id="rides-thriller">
         <div class="rides-detail">
@@ -128,6 +135,8 @@
 							shoreditch locavore four loko cardigan keytar yr.</p>
 					</div>
       </div>
+		</div>
+	  </div>
       <div id="rides-kids">
        				<div class="rides-detail">
 					<figure class="rides-detail-img">
@@ -187,7 +196,7 @@
       <div id="rides-water">
         <div class="rides-detail">
           <figure class="rides-detail-img">
-            <img alt="Ride Image" width="400" src="assets/images/rides/water-rides/">
+            <img alt="Ride Image" width="400" src="assets/images/rides/water-rides/children-europa-park-fun-34524.jpg">
             <figcaption>
               <span>Height:</span>
               <span> 4 ft</span>
@@ -239,26 +248,43 @@
       </div>
     </div>
   </main>
-  <footer>
-    <div id="contact">
-      <nav>
-        <ul>
-          <li id="facebook"><a href="#">Facebook</a></li>
-          <li id="instagram"><a href="#">Instagram</a></li>
-          <li id="tweeter"><a href="#">Tweeter</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div id="quicklinks">
-      <nav>
-        <ul>
-     <li><a href="tickets.html">Tickets</a></li>
+<footer>
+<div class="row">
+		<div  id="quick-links">
+   <div class="column" style="background-color:#333;">
+  <h4>Quick Links</h4>
+			<ul>
+		  <li><a href="tickets.html">Tickets</a></li>
       <li><a href="Info.html#directions">Directions</a></li>
 				<li><a href="Info.html#accessibility">Accessibility</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
+			</ul>
+			</div></div>
+  	<div   id="contact">
+	<div class="column" style="background-color:#333;">
+    <h4> Contact</h4>
+		<p>
+    	<div id="physical-address">
+					  <address>1 Milky Way, Luna Lagoon, CA, 12321</address>
+				</div>
+						<div Class="footer" id="phone-number">
+					  <p>123 1232 1212</p>
+		</div> </div></p>
+  </div>
+	<div class="column" style="background-color:#333;">
+		<div id="social">
+ 		<h4>Social</h4>
+	
+			<a href="facebook.com"><i class="fa fa-facebook" style="fff;"></i></a>
+					<a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+					<a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+					<a href="https://linkedin.com"><i class="fa fa-linkedin"></i></a>
+					<a href="https://youtube.com"><i class="fa fa-youtube"></i></a>
+                    <a href="mailto:example@domain.com"><i class="fa fa-envelope"></i></a>
+  </div>
+	</div>
+  </div>
+</div>
+	</footer>
 </body>
 
 </html>
